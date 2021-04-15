@@ -7,18 +7,22 @@ import TodoFeature from './features/todo';
 function App() {
   return (
     <div className="App">
-      Header 
-      <p><Link to="/todos">Todos</Link></p>
-      <p><Link to="/albums">Albums</Link></p>
+      Header
+      <p>
+        <Link to="/todos">Todos</Link>
+      </p>
+      <p>
+        <Link to="/albums">Albums</Link>
+      </p>
       <Switch>
         <Redirect from="/home" to="/" exact />
         <Redirect from="/post-list/:postId" to="/posts/:postId" exact />
 
-        <Route path="/" component={TodoFeature} exact/>
+        <Route path="/" component={TodoFeature} exact />
         <Route path="/todos" component={TodoFeature} />
         <Route path="/albums" component={AlbumFeature} />
 
-        <Route component={NotFound}/>
+        <Route component={NotFound} />
       </Switch>
       Footer
     </div>
