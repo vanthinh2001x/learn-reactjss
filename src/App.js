@@ -7,7 +7,7 @@ import TodoFeature from './features/todo';
 function App() {
   return (
     <div className="App">
-      Header
+      Header 
       <p><Link to="/todos">Todos</Link></p>
       <p><Link to="/albums">Albums</Link></p>
       <Switch>
