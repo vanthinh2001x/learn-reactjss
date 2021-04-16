@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
+import productApi from './api/productApi';
 import NotFound from './components/NotFound';
 import AlbumFeature from './features/album';
 import TodoFeature from './features/todo';
 
 function App() {
+
+
   return (
     <div className="App">
       Header
