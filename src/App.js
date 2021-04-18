@@ -1,6 +1,8 @@
+import Header from 'components/Header';
 import React, { useEffect } from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import productApi from './api/productApi';
+import './App.css';
 import NotFound from './components/NotFound';
 import AlbumFeature from './features/album';
 import CounterFeature from './features/Counter';
@@ -20,14 +22,9 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      Header
-      <p>
-        <Link to="/todos">Todos</Link>
-      </p>
-      <p>
-        <Link to="/albums">Albums</Link>
-      </p>
+    <div className="app">
+      <Header />
+    
       <Switch>
         <Redirect from="/home" to="/" exact />
         <Redirect from="/post-list/:postId" to="/posts/:postId" exact />
